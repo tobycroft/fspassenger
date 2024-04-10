@@ -1,10 +1,9 @@
 # fspassenger
-This is a project about MSFS2020 FSPassenger in Golang
 
+This is a project of MSFS2020 FSPassenger in python
 
-I used to use FSPassenger in FSX or P3D ,but there is no any implement
-in MSFS2020
+Recently I moved this project from Golang to python
 
-I 'd like to use a simple way to Identify the quality of my flight
+RoadMap:
 
-
+- test all main vars
