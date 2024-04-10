@@ -6,4 +6,8 @@ Recently I moved this project from Golang to python
 
 RoadMap:
 
+- Currently No done
+
+TODO:
+
 - test all main vars
