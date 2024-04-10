@@ -29,6 +29,7 @@ print("GROUND_ALTITUDE", aq.get("GROUND_ALTITUDE"))
 print("REALISM", aq.get("REALISM"))
 print("REALISM_CRASH_DETECTION", aq.get("REALISM_CRASH_DETECTION"))
 print("AMBIENT_TEMPERATURE", aq.get("AMBIENT_TEMPERATURE"))
+print("G_FORCE", aq.get("G_FORCE"))
 if aq.get("SIM_ON_GROUND") == 1:
     print("on ground")
 else:
