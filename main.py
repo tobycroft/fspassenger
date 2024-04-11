@@ -28,7 +28,7 @@ ae = AircraftEvents(sm)
 
 while True:
     # print(aq.find("CRASH_FLAG").defined)
-    print("CATEGORY", aq.get("CATEGORY").decode())
+    print("CATEGORY", aq.get("CATEGORY"))
     print("GROUND_ALTITUDE", aq.get("GROUND_ALTITUDE"))
     print("REALISM", aq.get("REALISM"))
     print("REALISM_CRASH_DETECTION", aq.get("REALISM_CRASH_DETECTION"))
@@ -49,6 +49,15 @@ while True:
     print("AIRSPEED_INDICATED", aq.get("AIRSPEED_INDICATED"))
     print("AIRSPEED_MACH", aq.get("AIRSPEED_MACH"))
     print("BARBER_POLE_MACH", aq.get("BARBER_POLE_MACH"))
+    print("HYDRAULIC_SYSTEM_INTEGRITY", aq.get("HYDRAULIC_SYSTEM_INTEGRITY"))
+    print("LEADING_EDGE_FLAPS_LEFT_PERCENT", aq.get("LEADING_EDGE_FLAPS_LEFT_PERCENT"))
+    # print(aq.set("LEADING_EDGE_FLAPS_LEFT_PERCENT",1))
+    # print(aq.set("TRAILING_EDGE_FLAPS_LEFT_PERCENT",1))
+    # TOGGLE_HYDRAULIC_FAILURE = ae.Failures.get("TOGGLE_HYDRAULIC_FAILURE")
+    # TOGGLE_HYDRAULIC_FAILURE()
+    TOGGLE_ELECTRICAL_FAILURE = ae.find("TOGGLE_PITOT_BLOCKAGE")
+    print("TOGGLE_PITOT_BLOCKAGE", TOGGLE_ELECTRICAL_FAILURE())
+
     if aq.get("SIM_ON_GROUND") == 1:
         print("on ground")
     else:
@@ -56,17 +65,9 @@ while True:
 
     if aq.get("CRASH_SEQUENCE") == 11:
         print("crashed")
-
+    print("-------------------")
     sleep(1)
     os.system('cls' if os.name == 'nt' else 'clear')
-# ae.Failures.get()
-# Trigger a simple event
-# event_to_trigger = ae.find("AP_MASTER")  # Toggles autopilot on or off
-# event_to_trigger()
 
-# Trigger an event while passing a variable
-# target_altitude = 4000
-# event_to_trigger = ae.find("AP_MASTER")  # Sets AP autopilot hold level
-# event_to_trigger(target_altitude)
 sm.exit()
 quit()
